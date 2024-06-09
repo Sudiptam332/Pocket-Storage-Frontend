@@ -7,6 +7,289 @@
   pointer-events: none;
 }
 
+.welcomeContainer{
+  background-color: #9ee6c1;
+  height: 90vh;
+  display: flex;
+}
+.welcomeLeft{
+  width: 50%;
+  margin: auto;
+  padding-left: 80px;
+}
+
+.welcomeRight{
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  padding: 0px 80px;
+  color: rgb(15, 12, 97);
+}
+
+.welcomeRight p{
+ color: #2f1f40;
+}
+
+.welNote{
+  display: flex;
+  width: 90%;
+  margin: 50px auto;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+  background: #d5bd6d;
+  border-radius: 20px;
+}
+
+.welNoteLeft{
+  width: 30%;
+}
+
+.welNoteLeft img{
+  width: 80%;
+}
+
+.welNoteRight{
+  width: 60%;
+}
+
+.welGalary{
+  display: flex;
+  width: 90%;
+  margin: 50px auto;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+  background: #e2a5cb;
+  border-radius: 20px;
+  flex-direction: row-reverse;
+}
+
+.welDoc{
+  display: flex;
+  width: 90%;
+  margin: 50px auto;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+  background: #99dd86;
+  border-radius: 20px;
+}
+
+.spiner{
+  width: 100%;
+}
+
+.spiner img{
+  height: fit-content;
+}
+
+.loginContainer{
+  width: 30%;
+  min-width: 300px;
+  margin: 50px auto;
+  border: 2px solid blue;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.wellcomeAddNote{
+  width: 50%;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid green;
+  border-radius: 20px;
+  background-color: rgba(134, 225, 134, 0.698);
+}
+
+.addIcon{
+  font-size: 100px;
+}
+
+.addNote{
+  width: 25%;
+  min-width: 200px;
+  height: 30vh;
+  margin-top: 15px;
+  text-align: center;
+  border: 2px solid green;
+  border-radius: 10px;
+  background-color: rgba(134, 225, 134, 0.698);
+}
+
+.mynotes{
+  margin: 10px 50px;
+}
+
+.mynote{
+  width: 25%;
+  min-width: 200px;
+  height: 30vh;
+  border: 2px solid rgb(5, 5, 88);
+  background-color: rgba(128, 174, 221, 0.702);
+}
+
+.noteControl{
+  display: flex;
+  width: 60px;
+  justify-content: space-between;
+  font-size: 25px;
+}
+
+.photoCon{
+  display: flex;
+  flex-direction: row;
+}
+
+.photo{
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 20px;
+  
+}
+
+.photo button{
+  font-size: 22px;
+}
+
+.addPhoto{
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  align-items: center;
+  background: rgb(196, 231, 156);
+}
+
+.photo img{
+  height: 40vh;
+  border-radius: 10px;
+}
+
+.docCon{
+  display: flex;
+  flex-direction: row;
+}
+
+.doc{
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 20px;
+  align-items: center;
+  background-image: linear-gradient(rgb(199, 238, 244), rgb(111, 175, 199))
+}
+
+.adddoc{
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  align-items: center;
+  background: rgb(196, 231, 156);
+  font-size: 50px
+}
+
+.abt{
+  width: 50%;
+  margin: 20px auto;
+}
+
+@media (max-width: 600px) {
+  .welcomeContainer{
+    flex-direction: column;
+  }
+  .welcomeLeft{
+    width: 100%;
+    padding-left: 0px;
+  }
+
+  .welcomeLeft img{
+    width: 100%;
+  }
+  
+  .welcomeRight{
+    width: 100%;
+    padding: 0px 15px;
+  }
+  
+  .welNote{
+    flex-direction: column;
+  }
+  
+  .welNoteLeft{
+    width: 100%;
+  }
+  
+  .welNoteLeft img{
+    width: 100%;
+  }
+  
+  .welNoteRight{
+    margin-top: 30px;
+    width: 100%;
+  }
+  
+  .welGalary{
+    flex-direction: column;
+  }
+  .welDoc{
+    flex-direction: column;
+    
+  }
+  .mynotes{
+    margin: 10px 10px;
+  }
+  .mynote{
+    width: 90%;
+  }
+  .addNote{
+    width: 90%;
+  }
+  .addPhoto{
+    width: 90%;
+    margin: 3px;
+  }
+  .photo{
+    width: 90%;
+    margin: auto;
+  }
+  .photo img{
+    width: 100%;
+    height: fit-content;
+    margin: auto;
+  }
+  .doc{
+    flex-direction: row;
+    width: 90%;
+  }
+  .adddoc{
+    width: 90%;
+  }
+  .spiner{
+    margin-top: 100px;
+  }
+  .spiner img{
+    width: 100%;
+    height: fit-content;
+    margin-top: 100px;
+  }
+  .abt{
+    width: 80%;
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
