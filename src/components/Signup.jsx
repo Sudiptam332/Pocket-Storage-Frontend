@@ -12,31 +12,38 @@ const Signup = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setLoading(true);
-        const response = await fetch("https://pocket-storage-backend.onrender.com/api/auth/createuser", {
-            method: 'POST',
-            headers: {
-                'Content-type': 'application/json'
-            },
-            body: JSON.stringify({ name: nameRef.current.value, email: emailRef.current.value, password: passwordRef.current.value })
-        });
-        try {
-            const json = await response.json();
-            console.log(json);
-            if (json.success) {
-                localStorage.setItem('token', json.authtoken);
-                setLoading(false);
-                navigate('/');
-            } else {
-                alert("Invalid Credentials");
+        if (passwordRef.current.value === cpasswordRef.current.value) {
+
+
+            setLoading(true);
+            const response = await fetch("https://pocket-storage-backend.onrender.com/api/auth/createuser", {
+                method: 'POST',
+                headers: {
+                    'Content-type': 'application/json'
+                },
+                body: JSON.stringify({ name: nameRef.current.value, email: emailRef.current.value, password: passwordRef.current.value })
+            });
+            try {
+                const json = await response.json();
+                console.log(json);
+                if (json.success) {
+                    localStorage.setItem('token', json.authtoken);
+                    setLoading(false);
+                    navigate('/');
+                } else {
+                    alert("Invalid Credentials");
+                    setLoading(false);
+                    navigate('/signup');
+                }
+            } catch (error) {
+                console.error('Failed to parse JSON response:', error);
+                alert("An unexpected error occurred. Please try again later.");
                 setLoading(false);
                 navigate('/signup');
             }
-        } catch (error) {
-            console.error('Failed to parse JSON response:', error);
-            alert("An unexpected error occurred. Please try again later.");
-            setLoading(false);
-            navigate('/signup');
+        }
+        else {
+            alert("Password and Confirm Password should be same.")
         }
     }
 
